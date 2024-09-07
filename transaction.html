@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>transaction</title>
+		<style>
+		 	body  { 
+		 		text-align: center;
+		 		background-color: powderblue;
+		 	}
+		 	#name {
+		 		border-radius: 5px;
+		 	}
+		 	#Accno {
+		 		border-radius: 5px;
+		 	}
+		 	#amt {
+		 		border-radius: 5px;
+		 	}
+		 </style>
+	</head>
+	<body>
+		<h1>GURU BANK</h1><br><br><br>
+		<h3>Transaction</h3><br><br><br>
+		<form id="form" action="transactionsuccessful.html">
+		<div>
+			<label>Name:<input type="text" id="name" name="name" size="30" required /></label><br><br>
+			<label>acc number:<input type="text" id="Accno" name="Accno" size="30" required /></label><br><br>
+			<label>transaction type:<select id="type" name="type" required>
+				<option value="" selected disabled hidden/>select</option>
+				<option value="withdraw">Withdraw</option>
+				<option value="Deposit">Deposit</option>
+			</select></label><br><br>
+			<label>amount:<input type="text" id="amt" name="amt" size="30" required /></label><br><br>
+		</div>
+		<button type="submit" onclick="transac()">transaction</button>
+		</form>
+		/*<script type="text/javascript">
+			function transac() {
+				const name=document.getElementById("name");
+				const Acccno=document.getElementById("Accno");
+				const type=document.getElementById("type");
+				const amt=document.getElementById("amt");
+				const form=document.getElementById("form");
+				form.addEventListener("submit",funtion(event)  { 
+					if(name.value==="" || Accno.value==="" || type.value==="" || amt.value==="") {
+						event.preventDefault();
+					}
+			});
+}
+		</script>*/
+	</body>

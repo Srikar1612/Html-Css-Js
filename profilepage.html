@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>profile page</title>
+	</head>
+	<body style="background-color:powderblue">
+		<div align="center">
+			<h1>GURU BANK</h1><br>
+			<h3>profile</h3><br>
+			<img src="image.jpg" height="200px" width="200px"></img><br><br>
+			<form id="form" action="transaction.html">
+				<label>Name:<input type="text" name="Name" id="Name" required></label><br><br>
+				<label>Acc number:<input type="text" name="Accnum" id="Acccnum" required></label><br><br>
+				<label>Email:<input type="email" name="email" id="email" required></label><br><br>
+				<label>Address:<input type="text" name="Add" id="Add" required></label><br><br>
+				<label>Gender:<input type="text" name="Gender" id="Gender" required></label><br><br>
+				<label>Password:<input type="password" name="pass" id="pass" required></label><br><br>
+				<button type="submit" onclick="transact()">transaction</button>
+				<input type="reset" value="Reset">
+			</form>
+			<script type="text/javascript">
+				function transact(){
+					const Name=document.getElementById("Name");
+					const Accnum=document.getElementById("Accnum");
+					const email=document.getElementById("email");
+					const Add=document.getElementById("Add");
+					const Gender=document.getElementById("Gender");
+					const pass=document.getElementById("pass");
+					const form=document.getElementById("form");
+					form.addEventListener("submit", function(event) {
+						if(Name.value==="" || Accnum.value==="" || email.value==="" || Add.value==="" || Gender.value==="" || pass.value==="")
+							event.preventDefault();
+					});
+				}
+				</script>
+		</div>
+	</body>
+</html>
+	

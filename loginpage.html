@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>login page</title>
+	</head>
+	<body style="background-color:powderblue">
+		<div align="center">
+			<h1>GURU BANK<h1><br><br><br>
+			<h3>login to your account</h3><br><br><br>
+			<label>User Name:<input type="text" id="uname" maxlength="30" ></input></label><br><br>
+			<label>password:<input type="password" id="pwd"></input></label><br><br>
+			<button type="submit" OnClick="Login()">submit</button>
+			<script type="text/javascript"> 
+				function Login() {
+					let user=document.getElementById("uname").value;
+					let pass=document.getElementById("pwd").value;
+					if(user==="user" && pass==="password")
+					{
+						location.replace("profilepage.html");
+					}
+					else
+					{
+						window.alert("Enter valid Username/Password");
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>

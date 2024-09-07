@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<head>
+	<head>
+		<style> 
+			body {
+				background-color: powderblue;
+				text-align: center;
+			}
+			#name {
+				border-radius: 5px;
+			}
+			#email {
+				border-radius: 5px;
+			}
+			#add {
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body style="">
+		<h1>GURU BANK</h1><br><br><br>
+		<h3>Registration</h3><br><br><br>
+		<form id="form" action="profilepage.html" method="post">
+		<label>Name:<input type="text" name="name" id="name" required /></label><br><br>
+		<label>Email:<input type="email" name="email" id="email" required /></label><br><br>
+		<label>Address:<textarea name="add" id="add" required /></textarea><br><br>
+		<label>Gender:</label><br><br>
+		<input type="radio" id="male" name="gender" value="male" required />male
+		<input type="radio" id="female" name="gender" value="Female" />Female<br><br>
+		<label>password:<input type="password" id="pass" name="pass" required /></label><br><br>
+		<button type="submit" onclick="Register()">register</button>
+		</form>
+		<script type="text/javascript">
+			function Register() {
+				const name=document.getElementById("name");
+				const email=document.getElementById("email");
+				const add=document.getElementById("add");
+				const gender=document.getElementById("gender");
+				const password=document.getElementById("pass");
+				const form=document.getElementById("form");
+				form.addEventListener("submit", function(event) {
+					if(name.value==="" || email.value==="" || add.value==="" || gender.value==="" || pass.value==="")
+						event.preventDefault();
+				});
+
+			}
+		</script>
+	</body>
+</head>
