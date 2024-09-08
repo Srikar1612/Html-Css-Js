@@ -41,6 +41,8 @@
 				form.addEventListener("submit", function(event) {
 					if(name.value==="" || email.value==="" || add.value==="" || gender.value==="" || pass.value==="")
 						event.preventDefault();
+					else
+						location.replace("profilepage.html");
 				});
 
 			}
