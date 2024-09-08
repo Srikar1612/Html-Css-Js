@@ -39,10 +39,10 @@
 				const password=document.getElementById("pass");
 				const form=document.getElementById("form");
 				form.addEventListener("submit", function(event) {
-					if(name.value=="" || email.value=="" || add.value=="" || gender.value=="" || pass.value=="")
-						event.preventDefault();
-					else
+					if(name.value!="" || email.value!="" || add.value!="" || gender.value!="" || pass.value!="")
 						location.replace("profilepage.html");
+					else
+						event.preventDefault();
 				});
 
 			}
